@@ -1,0 +1,354 @@
+[
+  {
+    "name": "admin",
+    "email": "admin@email.com",
+    "gender": "male",
+    "about": "The admin who no one can touch",
+    "password": "adamantine",
+    "passwordConfirm": "adamantine",
+    "role": "admin"
+  },
+  {
+    "name": "Alice Johnson",
+    "email": "alice.johnson@email.com",
+    "gender": "Female",
+    "about": "Passionate environmentalist and avid hiker.",
+    "password": "Gr33nH1k",
+    "passwordConfirm": "Gr33nH1k",
+    "role": "user"
+  },
+  {
+    "name": "Brian Smith",
+    "email": "brian.smith@email.com",
+    "gender": "Male",
+    "about": "Software developer with a love for jazz music.",
+    "password": "J@zzC0de",
+    "passwordConfirm": "J@zzC0de",
+
+    "role": "user"
+  },
+  {
+    "name": "Chen Wei",
+    "email": "chen.wei@email.com",
+    "gender": "Non-binary",
+    "about": "Aspiring chef specializing in fusion cuisine.",
+    "password": "Fu5i0n8*",
+    "passwordConfirm": "Fu5i0n8*",
+    "role": "user"
+  },
+  {
+    "name": "Dana Carter",
+    "email": "dana.carter@email.com",
+    "gender": "Female",
+    "about": "Freelance graphic designer and cat enthusiast.",
+    "password": "C@tArt1s",
+    "passwordConfirm": "C@tArt1s",
+    "role": "user"
+  },
+  {
+    "name": "Ethan Nguyen",
+    "email": "ethan.nguyen@email.com",
+    "gender": "Male",
+    "about": "Mechanical engineer with a passion for vintage cars.",
+    "password": "V1nt@ge2",
+    "passwordConfirm": "V1nt@ge2",
+    "role": "user"
+  },
+  {
+    "name": "Fiona O'Brien",
+    "email": "fiona.obrien@email.com",
+    "gender": "Female",
+    "about": "Pediatric nurse and amateur botanist.",
+    "password": "Pl@ntKid",
+    "passwordConfirm": "Pl@ntKid",
+    "role": "user"
+  },
+  {
+    "name": "George Patel",
+    "email": "george.patel@email.com",
+    "gender": "Male",
+    "about": "Financial analyst and weekend rock climber.",
+    "password": "Cl1mb3r$",
+    "passwordConfirm": "Cl1mb3r$",
+    "role": "user"
+  },
+  {
+    "name": "Hannah Kim",
+    "email": "hannah.kim@email.com",
+    "gender": "Female",
+    "about": "Aspiring novelist and coffee connoisseur.",
+    "password": "N0v3lCaf",
+    "passwordConfirm": "N0v3lCaf",
+    "role": "user"
+  },
+  {
+    "name": "Ian Foster",
+    "email": "ian.foster@email.com",
+    "gender": "Male",
+    "about": "High school physics teacher and amateur astronomer.",
+    "password": "St@rG@ze",
+    "passwordConfirm": "St@rG@ze",
+    "role": "user"
+  },
+  {
+    "name": "Julia Russo",
+    "email": "julia.russo@email.com",
+    "gender": "Female",
+    "about": "Marketing specialist with a passion for photography.",
+    "password": "Phot0Ad$",
+    "passwordConfirm": "Phot0Ad$",
+    "role": "user"
+  },
+  {
+    "name": "Kai Takahashi",
+    "email": "kai.takahashi@email.com",
+    "gender": "Non-binary",
+    "about": "Sustainable fashion designer and yoga instructor.",
+    "password": "Ec0Y0ga8",
+    "passwordConfirm": "Ec0Y0ga8",
+    "role": "user"
+  },
+  {
+    "name": "Liam O'Connor",
+    "email": "liam.oconnor@email.com",
+    "gender": "Male",
+    "about": "Organic farmer and beekeeping enthusiast.",
+    "password": "H0neyBee",
+    "passwordConfirm": "H0neyBee",
+    "role": "user"
+  },
+  {
+    "name": "Maya Gupta",
+    "email": "maya.gupta@email.com",
+    "gender": "Female",
+    "about": "Biomedical researcher and classical violinist.",
+    "password": "Vi0l1nMD",
+    "passwordConfirm": "Vi0l1nMD",
+    "role": "user"
+  },
+  {
+    "name": "Noah Chen",
+    "email": "noah.chen@email.com",
+    "gender": "Male",
+    "about": "Urban planner with a love for street art.",
+    "password": "Str33tAr",
+    "passwordConfirm": "Str33tAr",
+    "role": "user"
+  },
+  {
+    "name": "Olivia Muñoz",
+    "email": "olivia.munoz@email.com",
+    "gender": "Female",
+    "about": "Environmental lawyer and avid scuba diver.",
+    "password": "0c3anLaw",
+    "passwordConfirm": "0c3anLaw",
+    "role": "user"
+  },
+  {
+    "name": "Quinn Harper",
+    "email": "quinn.harper@email.com",
+    "gender": "Non-binary",
+    "about": "Freelance journalist and documentary filmmaker.",
+    "password": "D0cuF1lm",
+    "passwordConfirm": "D0cuF1lm",
+    "role": "user"
+  },
+  {
+    "name": "Rachel Cohen",
+    "email": "rachel.cohen@email.com",
+    "gender": "Female",
+    "about": "Art therapist and mixed media artist.",
+    "password": "Ar7Th3r@",
+    "passwordConfirm": "Ar7Th3r@",
+    "role": "user"
+  },
+  {
+    "name": "Samuel Okafor",
+    "email": "samuel.okafor@email.com",
+    "gender": "Male",
+    "about": "Data scientist with a passion for African literature.",
+    "password": "D@taB00k",
+    "passwordConfirm": "D@taB00k",
+    "role": "user"
+  },
+  {
+    "name": "Tessa Martinez",
+    "email": "tessa.martinez@email.com",
+    "gender": "Female",
+    "about": "Veterinarian specializing in exotic animals.",
+    "password": "Ex0t1cVt",
+    "passwordConfirm": "Ex0t1cVt",
+    "role": "user"
+  },
+  {
+    "name": "Umar Farooq",
+    "email": "umar.farooq@email.com",
+    "gender": "Male",
+    "about": "Renewable energy consultant and amateur astronomer.",
+    "password": "S0larSky",
+    "passwordConfirm": "S0larSky",
+    "role": "user"
+  },
+  {
+    "name": "Valentina Rossi",
+    "email": "valentina.rossi@email.com",
+    "gender": "Female",
+    "about": "Professional ballet dancer and language tutor.",
+    "password": "D@nceL1n",
+    "passwordConfirm": "D@nceL1n",
+    "role": "user"
+  },
+  {
+    "name": "William Chang",
+    "email": "william.chang@email.com",
+    "gender": "Male",
+    "about": "Cybersecurity analyst and martial arts instructor.",
+    "password": "Cyb3rKu1",
+    "passwordConfirm": "Cyb3rKu1",
+    "role": "user"
+  },
+  {
+    "name": "Xia Li",
+    "email": "xia.li@email.com",
+    "gender": "Female",
+    "about": "Quantum physicist and amateur botanist.",
+    "password": "Qu@ntumF",
+    "passwordConfirm": "Qu@ntumF",
+    "role": "user"
+  },
+  {
+    "name": "Yuki Tanaka",
+    "email": "yuki.tanaka@email.com",
+    "gender": "Non-binary",
+    "about": "Video game developer and cosplay enthusiast.",
+    "password": "C0spl@yX",
+    "passwordConfirm": "C0spl@yX",
+    "role": "user"
+  },
+  {
+    "name": "Zara Ahmed",
+    "email": "zara.ahmed@email.com",
+    "gender": "Female",
+    "about": "Human rights lawyer and spoken word poet.",
+    "password": "P03tLaw$",
+    "passwordConfirm": "P03tLaw$",
+    "role": "user"
+  },
+  {
+    "name": "Adam Kowalski",
+    "email": "adam.kowalski@email.com",
+    "gender": "Male",
+    "about": "Architectural historian and urban sketcher.",
+    "password": "Sk3tchAr",
+    "passwordConfirm": "Sk3tchAr",
+    "role": "user"
+  },
+  {
+    "name": "Bianca Silva",
+    "email": "bianca.silva@email.com",
+    "gender": "Female",
+    "about": "Nutritionist specializing in plant-based diets.",
+    "password": "Pl@ntEat",
+    "passwordConfirm": "Pl@ntEat",
+    "role": "user"
+  },
+  {
+    "name": "Carlos Mendoza",
+    "email": "carlos.mendoza@email.com",
+    "gender": "Male",
+    "about": "Aerospace engineer and salsa dancing instructor.",
+    "password": "S@lsaF1y",
+    "passwordConfirm": "S@lsaF1y",
+    "role": "user"
+  },
+  {
+    "name": "Daphne Wong",
+    "email": "daphne.wong@email.com",
+    "gender": "Female",
+    "about": "Marine biologist and underwater photographer.",
+    "password": "0c3anPic",
+    "passwordConfirm": "0c3anPic",
+    "role": "user"
+  },
+  {
+    "name": "Elijah Thompson",
+    "email": "elijah.thompson@email.com",
+    "gender": "Male",
+    "about": "Jazz musician and music theory professor.",
+    "password": "J@zzTh30",
+    "passwordConfirm": "J@zzTh30",
+    "role": "user"
+  },
+  {
+    "name": "Fatima Al-Sayed",
+    "email": "fatima.alsayed@email.com",
+    "gender": "Female",
+    "about": "Neuroscientist and mindfulness meditation teacher.",
+    "password": "M1ndBr@1",
+    "passwordConfirm": "M1ndBr@1",
+    "role": "user"
+  },
+  {
+    "name": "Gabriel Santos",
+    "email": "gabriel.santos@email.com",
+    "gender": "Male",
+    "about": "Sustainable architecture consultant and tiny house builder.",
+    "password": "T1nyEco*",
+    "passwordConfirm": "T1nyEco*",
+    "role": "user"
+  },
+  {
+    "name": "Hana Novak",
+    "email": "hana.novak@email.com",
+    "gender": "Female",
+    "about": "Folklore researcher and traditional crafts artisan.",
+    "password": "F0lkArt7",
+    "passwordConfirm": "F0lkArt7",
+    "role": "user"
+  },
+  {
+    "name": "Ibrahim Aziz",
+    "email": "ibrahim.aziz@email.com",
+    "gender": "Male",
+    "about": "Blockchain developer and cryptocurrency enthusiast.",
+    "password": "Crypt0Bk",
+    "passwordConfirm": "Crypt0Bk",
+    "role": "user"
+  },
+  {
+    "name": "Jasmine Chow",
+    "email": "jasmine.chow@email.com",
+    "gender": "Female",
+    "about": "Child psychologist and children's book illustrator.",
+    "password": "K1dB00k$",
+    "passwordConfirm": "K1dB00k$",
+    "role": "user"
+  },
+  {
+    "name": "Kwame Osei",
+    "email": "kwame.osei@email.com",
+    "gender": "Male",
+    "about": "Social entrepreneur focusing on rural development.",
+    "password": "Rur@lDev",
+    "passwordConfirm": "Rur@lDev",
+    "role": "user"
+  },
+  {
+    "name": "Layla Hassan",
+    "email": "layla.hassan@email.com",
+    "gender": "Female",
+    "about": "Astrophysicist and science communicator.",
+    "password": "St@rT@lk",
+    "passwordConfirm": "St@rT@lk",
+    "role": "user"
+  },
+  {
+    "name": "Miguel Rodriguez",
+    "email": "miguel.rodriguez@email.com",
+    "gender": "Male",
+    "about": "Paramedic and search and rescue volunteer.",
+    "password": "R3scu3Md",
+    "passwordConfirm": "R3scu3Md",
+    "role": "user"
+  }
+]

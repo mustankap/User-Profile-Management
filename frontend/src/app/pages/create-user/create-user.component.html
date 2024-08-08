@@ -1,0 +1,201 @@
+<div class="row">
+  <div class="col-12">
+    <div class="container">
+      <form
+        [formGroup]="userForm"
+        (ngSubmit)="onSubmit()"
+        class="row g-3 needs-validation"
+        novalidate
+      >
+        <!-- <div class="row g-3 needs-validation" novalidate> -->
+
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <!-- <input type="text" [(ngModel)]="userForm.name" class="form-control" /> -->
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                userForm.get('name')?.invalid &&
+                (userForm.get('name')?.dirty || userForm.get('name')?.touched)
+            }"
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('name')?.errors?.['required']"
+          >
+            Name is required.
+          </div>
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('name')?.errors?.['minlength']"
+          >
+            Name must be at least 2 characters long.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="validationCustomUsername" class="form-label">Email</label>
+
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+            <input
+              type="text"
+              formControlName="email"
+              class="form-control"
+              aria-describedby="inputGroupPrepend"
+              [ngClass]="{
+                'is-invalid':
+                  userForm.get('email')?.invalid &&
+                  (userForm.get('email')?.dirty ||
+                    userForm.get('email')?.touched)
+              }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="userForm.get('email')?.errors?.['required']"
+            >
+              Email is required.
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="userForm.get('email')?.errors?.['email']"
+            >
+              Please enter a valid email.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <label class="form-label">About</label>
+          <input
+            type="text"
+            formControlName="about"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                userForm.get('about')?.invalid &&
+                (userForm.get('about')?.dirty || userForm.get('about')?.touched)
+            }"
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('about')?.errors?.['required']"
+          >
+            About is required.
+          </div>
+        </div>
+        <!-- *ngIf="!isEditMode" -->
+        <div class="col-md-6" *ngIf="!isEditMode">
+          <label for="validationCustom01" class="form-label">Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                userForm.get('password')?.invalid &&
+                (userForm.get('password')?.dirty ||
+                  userForm.get('password')?.touched)
+            }"
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('password')?.errors?.['required']"
+          >
+            Password is required.
+          </div>
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('password')?.errors?.['minlength']"
+          >
+            Password must be at least 8 characters long.
+          </div>
+        </div>
+
+        <div class="col-md-6" *ngIf="!isEditMode">
+          <label for="validationCustom03" class="form-label"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            formControlName="passwordConfirm"
+            class="form-control"
+            [ngClass]="{'is-invalid': userForm.get('passwordConfirm')?.invalid && (userForm.get('passwordConfirm')?.dirty || userForm.get('passwordConfirm')?.touched) || userForm.errors?.['mismatch']}"
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('passwordConfirm')?.errors?.['required']"
+          >
+            Confirm Password is required.
+          </div>
+          <div class="invalid-feedback" *ngIf="userForm.errors?.['mismatch']">
+            Passwords do not match.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Gender</label>
+          <input
+            type="text"
+            formControlName="gender"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                userForm.get('gender')?.invalid &&
+                (userForm.get('gender')?.dirty ||
+                  userForm.get('gender')?.touched)
+            }"
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="userForm.get('gender')?.errors?.['required']"
+          >
+            Gender is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="invalidCheck"
+              required
+            />
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <!-- @if(userForm.id ==0 ){
+          <button class="btn btn-primary" type="button" (click)="onSave()">
+            Create User
+          </button>
+          }@else{
+          <button class="btn btn-warning" type="button" (click)="onEdit()">
+            Update Profile
+          </button>
+           } -->
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="userForm.invalid"
+          >
+            {{ isEditMode ? 'Update User' : 'Create User' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- (click)="onSave() -->
