@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-12">
     <div class="container">
+      <h2>
+        {{
+          isNewUserRegistration
+            ? 'Register'
+            : isEditMode
+            ? 'Edit User'
+            : 'Create User'
+        }}
+      </h2>
       <form
         [formGroup]="userForm"
         (ngSubmit)="onSubmit()"
@@ -185,12 +194,25 @@
           </button>
            } -->
 
-          <button
+          <!-- <button
             class="btn btn-primary"
             type="submit"
             [disabled]="userForm.invalid"
           >
             {{ isEditMode ? 'Update User' : 'Create User' }}
+          </button> -->
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="userForm.invalid"
+          >
+            {{
+              isNewUserRegistration
+                ? 'Register'
+                : isEditMode
+                ? 'Update User'
+                : 'Create User'
+            }}
           </button>
         </div>
       </form>

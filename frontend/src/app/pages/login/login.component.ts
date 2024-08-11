@@ -37,7 +37,6 @@ export class LoginComponent {
   }
 
   register() {
-    this.newuser = 1;
-    this.router.navigateByUrl('createUser');
+    this.router.navigateByUrl('/register');
   }
 }

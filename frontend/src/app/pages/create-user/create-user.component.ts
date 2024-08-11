@@ -27,8 +27,11 @@ export class CreateUserComponent implements OnInit {
 
   isEditMode: boolean = false;
   loggedUserId: any = 0;
+  isNewUserRegistration: boolean = false;
 
   constructor() {
+    this.isNewUserRegistration = this.router.url === '/register';
+
     this.userForm = this.formBuilder.group(
       {
         id: [''],
@@ -42,6 +45,10 @@ export class CreateUserComponent implements OnInit {
       },
       { validator: this.passwordMatchValidator }
     );
+
+    if (this.isNewUserRegistration) {
+      this.userForm.patchValue({ role: 'user' });
+    }
   }
 
   ngOnInit() {
@@ -62,7 +69,6 @@ export class CreateUserComponent implements OnInit {
         this.isEditMode = true;
         this.getUserById(params['id']);
       } else {
-        console.log('hyy');
         this.userForm.controls['password'].addValidators([Validators.required]);
         this.userForm.controls['passwordConfirm'].addValidators([
           Validators.required,
@@ -113,6 +119,8 @@ export class CreateUserComponent implements OnInit {
     if (this.userForm.valid) {
       if (this.isEditMode) {
         this.onUpdate();
+      } else if (this.isNewUserRegistration) {
+        this.onRegister();
       } else {
         this.onSave();
       }
@@ -141,17 +149,26 @@ export class CreateUserComponent implements OnInit {
     const userId = this.userForm.get('id')?.value;
     const updateData = { ...this.userForm.value };
     // delete updateData.id;
-    console.log('updateData below:');
-    console.log(updateData);
+    // console.log('updateData below:');
+    // console.log(updateData);
     this.userService.updateUserById(userId, updateData).subscribe(
       (res: any) => {
         if (res.status === 'success') {
           alert('Your details have been updated Successfully');
-          if (res.role == 'user') {
-            this.router.navigateByUrl(`createUser/${res.data.user._id}`);
+          const loggedUser = JSON.parse(
+            localStorage.getItem('userApp') || '{}'
+          );
+          if (loggedUser.role == 'user') {
+            this.router
+              .navigateByUrl(`/createUser/${userId}`, {
+                skipLocationChange: true,
+              })
+              .then(() => {
+                this.router.navigate([`/createUser/${userId}`]);
+              });
+          } else {
+            this.router.navigateByUrl('/user-list');
           }
-
-          this.router.navigateByUrl('/user-list');
         } else {
           console.log('inner console error');
 
@@ -161,6 +178,22 @@ export class CreateUserComponent implements OnInit {
       (error) => {
         console.log('outer console error');
         alert(error.error.message || 'An error occurred');
+      }
+    );
+  }
+
+  onRegister() {
+    this.userService.createNewUser(this.userForm.value).subscribe(
+      (res: any) => {
+        if (res.status === 'success') {
+          alert('Registration Successful. Please login.');
+          this.router.navigateByUrl('/login');
+        } else {
+          alert(res.message);
+        }
+      },
+      (error) => {
+        alert(error.error.message || 'An error occurred during registration');
       }
     );
   }

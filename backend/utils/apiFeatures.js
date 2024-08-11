@@ -43,16 +43,16 @@ class APIFeatures {
 
   paginate() {
     const page = this.queryString.page * 1 || 1;
-    console.log('page ===>', page);
+    // console.log('page ===>', page);
     const limit = this.queryString.limit * 1 || 100;
-    console.log('limit ===>', limit);
+    // console.log('limit ===>', limit);
 
     const skip = (page - 1) * limit;
-    console.log('page ===>', page);
-    console.log('limit ===>', limit);
-    console.log('page - 1 ===>', page - 1);
-    console.log('(page - 1) * limit ===>', (page - 1) * limit);
-    console.log('skip ===>', skip);
+    // console.log('page ===>', page);
+    // console.log('limit ===>', limit);
+    // console.log('page - 1 ===>', page - 1);
+    // console.log('(page - 1) * limit ===>', (page - 1) * limit);
+    // console.log('skip ===>', skip);
 
     this.query = this.query.skip(skip).limit(limit);
 
